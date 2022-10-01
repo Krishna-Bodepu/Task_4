@@ -1,15 +1,15 @@
 import numpy as np
 
 # Import phi from train data set
-phi = np.loadtxt('data/train.csv', dtype='float', delimiter=',', skiprows=1,
+phi = np.loadtxt('train.csv', dtype='float', delimiter=',', skiprows=1,
                  usecols=tuple(range(1, 14)))
 
 # Import y from train data set
-y = np.loadtxt('data/train.csv', dtype='float', delimiter=',', skiprows=1,
+y = np.loadtxt('train.csv', dtype='float', delimiter=',', skiprows=1,
                usecols=14, ndmin=2)
 
 # Import phi_test from test data set
-phi_test = np.loadtxt('data/test.csv', dtype='float', delimiter=',',
+phi_test = np.loadtxt('test.csv', dtype='float', delimiter=',',
                       skiprows=1, usecols=tuple(range(1, 14)))
 
 
@@ -70,7 +70,7 @@ for (fname, p) in filenames.items():
         i = i + 1
 
     # Load values of id
-    id_test = np.loadtxt('data/test.csv', dtype='int', delimiter=',',
+    id_test = np.loadtxt('test.csv', dtype='int', delimiter=',',
                          skiprows=1, usecols=0, ndmin=2)
 
     # Calculate y for test data
